@@ -1,0 +1,23 @@
+<h1> Data Analysis</h1>
+<% if @is_empty %>
+   <h2> Please Insert Data first </h2>
+  <%else %>
+  <div>
+    <p><strong>Max Value:</strong></p>
+    <p><%= @max_value %></p>
+  </div>
+  <div>
+    <p><strong>Median Value:</strong></p>
+    <p><%= @median_value %></p>
+  </div>
+  <div>
+    <p><strong>Count Value:</strong></p>
+    <p><%= @count_value %></p>
+  </div>
+  <div>
+    <p><strong>Time Series:</strong></p>
+    <%= line_chart @domain_hash, download: true,title: "time series plot",xtitle: "dates",ytitle: "values"%>
+  </div>
+  <%end %>
+
+<%= link_to "send_email" ,welcome_send_mail_path %>

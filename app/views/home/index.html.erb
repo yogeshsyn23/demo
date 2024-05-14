@@ -7,8 +7,10 @@
   <br>
   <%= link_to "download file", home_download_path%>
   <br>
-
+  <% if user_signed_in? %>
   <br>
   <%= render "/home/import" %>
   <br>
+    <%= link_to "Data Analysis", analysis_show_path %>
+  <% end %>
 </div>
