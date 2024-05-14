@@ -4,7 +4,7 @@ class ColumnService
   extend T::Sig
 
   sig { params(dto: CompanyListResponse).void }
-  def modify(dto:)
+  def modify(dto)
     mdto = dto.data.map do |company|
       company.id = company.id + 1
       company
@@ -14,7 +14,7 @@ class ColumnService
   end
 
   sig { params(dto: CompanyListResponse).void }
-  def modify_v2(dto:)
+  def modify_v2(dto)
     mdto = dto.data.map do |company|
       company.id = company.id + 1
       company
@@ -23,7 +23,7 @@ class ColumnService
   end
 
   sig { params(dto: CompanyListResponse).void }
-  def modify_new(dto:)
+  def modify_new(dto)
     upload_aws
     mdto = dto.data.map do |company|
       company.id = company.id + 1
