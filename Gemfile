@@ -69,5 +69,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
+gem 'sorbet', '~> 0.5.10712'
 gem "karafka", ">= 2.2.10"
+gem 'rubocop', '~> 1.48.0', require: false
+gem 'rubocop-performance', '~> 1.16.0', require: false
+gem 'rubocop-rails', '~> 2.18.0', require: false
+gem 'rubocop-rspec', '~> 2.19.0', require: false
+gem 'sorbet-rails', '~> 0.7.34'
+gem 'sorbet-runtime', '~> 0.5.10712'
