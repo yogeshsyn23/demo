@@ -69,5 +69,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
+gem 'sorbet', '~> 0.5.10712'
 gem "karafka", ">= 2.2.10"
